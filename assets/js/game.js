@@ -38,7 +38,8 @@ const myColor = (colorcode) => {
  * Constants & Variables Initialization Section.
  */
 const myGreen = myColor("rgba(29, 100, 31, 0.70)"); /* Green with 70% transparency */
-const myRed = myColor("rgba(84, 0, 30, 0.70)"); /* Red with 70% transparency */
+const myRed = myColor("rgba(255, 51, 51, 0.70)"); /* Red with 70% transparency */
+//const myRed = myColor("rgba(84, 0, 30, 0.70)"); /* Red with 70% transparency */
 
 const quizUrl = 'qdatabase.php?'; // PHP database script 
 const d = document; // Shorten docoment function::
@@ -153,7 +154,7 @@ const disableListeners = () => {
 /* Calculate Percent */
 const calcPercent = (correct, total) => {
     var average = (correct / total) * 100;
-    percent.textContent = average.toFixed(0) + "%";
+    percent.textContent = average.toFixed(0) + " percent";
 };
 
 /* Figure out Score */
