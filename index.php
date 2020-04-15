@@ -9,15 +9,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>The Challenge Day Quiz</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
         <link rel="stylesheet" type="text/css" href="assets/css/challenge_style.css">
         <script type="text/javascript"src="assets/js/game.js" defer></script>
     </head>
     <body>
         <div id="page">
-            <header>
-                <a class="logo" id="startBtn" title="Start Button" href="index.php"><span>Start Button</span></a>
-            </header>
             <section class="main">
+                <a class="logo" id="startBtn" title="Start Button" href="index.php"><span>Start Button</span></a>
                 <div id="quiz">
                     <form id="gameCat" action="game.php" method="post">
                         <select id="selectCat" class="select-css" name="category" tabindex="1">
@@ -34,15 +33,17 @@
                             <div id="headerStyle" data-user="">
                                 <h2>Time Left: <span id="clock"></span></h2>
                             </div>
+                            <hr class="hrStyle">
                             <div id="triviaSection" data-correct="">
                                 <div id="questionBox">
                                     <h2 id="question">What is the Question?</h2>
                                 </div>
                                 <div id="buttonContainer"></div>
                             </div>
+                            <hr class="hrStyle">
                             <div id="playerStats">
                                 <h2 id="score">Score 0 Points</h2>
-                                <h2 id="percent">100%</h2>
+                                <h2 id="percent">100 percent</h2>
                             </div>
                             <div id="nextStyle">
                                 <button id="next" class="nextBtn">Next</button>
