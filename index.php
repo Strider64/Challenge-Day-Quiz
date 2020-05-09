@@ -1,6 +1,6 @@
-<?php 
-    require_once 'assets/config/config.php';
-    $_SESSION['api_key'] = bin2hex(random_bytes(32)); // 64 characters long
+<?php
+require_once 'assets/config/config.php';
+$_SESSION['api_key'] = bin2hex(random_bytes(32)); // 64 characters long
 ?>
 <!DOCTYPE html>
 
@@ -14,9 +14,16 @@
         <script type="text/javascript"src="assets/js/game.js" defer></script>
     </head>
     <body>
+        <noscript>
+        <h1>Sorry, but you need Javascript enabled to use this website.</h2>
+        </noscript>
         <div id="page">
             <section class="main">
-                <a class="logo" id="startBtn" title="Start Button" href="index.php"><span>Start Button</span></a>
+                <div id="header">
+                    <div id="startBtn">
+                        <a class="logo" id="customBtn" title="Start Button" href="index.php"><span>Start Button</span></a>
+                    </div>
+                </div>
                 <div id="quiz">
                     <form id="gameCat" action="game.php" method="post">
                         <select id="selectCat" class="select-css" name="category" tabindex="1">
@@ -56,6 +63,13 @@
                     <p>This is a vanilla javascript quiz that I have been developing over the years and the playability is starting to get there. However, over the next few weeks I will be improving the game play where there will be high scores, game difficulty and other great improvements.</p>
                 </div>
             </section> <!-- End of Section -->
+            <footer>
+                &copy; The Miniature Photographer
+                <div class="content">
+                    <a class="menuExit" title="The Miniature Photographer" href="https://www.miniaturephotographer.com/">The Miniature Photographer</a>
+                    <!--        <a title="Terms of Service" href="#">Terms of Service</a>-->
+                </div>
+            </footer>
         </div>
-    </body>
+</body>
 </html>
