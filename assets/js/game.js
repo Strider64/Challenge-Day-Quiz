@@ -183,6 +183,7 @@ const handleErrors = (response) => {
 
 /* Success function utilizing FETCH */
 const checkUISuccess = function (parsedData) {
+    console.log(parsedData);
     var correct = parseInt(parsedData.correct);
     var userAnswer = parseInt(d.querySelector('#headerStyle').getAttribute('data-user'));
     scoringFcn(userAnswer, correct);
@@ -397,7 +398,7 @@ var startBtn = d.querySelector('#startBtn');
 const startgame = (e) => {
   e.preventDefault();
   d.querySelector('.gameTitle').textContent = "Photography";
-  startBtn.style.display = "none";
+  d.querySelector('#header').style.display = "none";
   d.querySelector('#triviaInfo').style.display = "none";
   d.querySelector('#quiz').style.display = 'block';
   selectCat('photography');
